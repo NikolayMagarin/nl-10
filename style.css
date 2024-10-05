@@ -1,0 +1,64 @@
+body {
+  margin: 0;
+  background: #2d9eea;
+  font-family: sans-serif;
+  width: 100%;
+}
+
+h1 {
+  font-size: 100px;
+  text-align: center;
+}
+
+header > img {
+  position: fixed;
+  width: auto;
+  z-index: -1;
+  margin-top: scroll();
+}
+
+@media screen and (max-width: 900px) {
+  header > img {
+    margin-left: calc(50% - 450px);
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  header > img {
+    width: 30%;
+  }
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+.device-container {
+  width: 1000px;
+  max-width: 100%;
+  margin: 100px auto;
+  box-shadow: 0px 0px 7px 0px rgba(34, 60, 80, 0.16);
+}
+
+.draggable-container {
+  position: relative;
+}
+
+.vizirka {
+  width: 9.1%;
+}
+
+.draggable {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  --pos-x: 0%;
+  transform: translate(calc(-50% + var(--pos-x)), -50%);
+  cursor: move;
+}
+
+.hidden {
+  visibility: hidden;
+}
